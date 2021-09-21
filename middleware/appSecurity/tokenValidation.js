@@ -14,20 +14,20 @@ export const validateToken = async (req, res, next) => {
     if(!token){
       return res
       .status(401)
-      .json({ errorMsg: 'Access is denied, Please login again!' });
+      .json({ errorMsg: 'Access is denied, please login again!' });
     }
     token = token.replace(/\"/g, "")
     const user = jwt.verify(token, constant.jwtSecret);
     if (!user) {
       return res
         .status(401)
-        .json({ errorMsg: 'Access is denied, Please login again!' });
+        .json({ errorMsg: 'Access is denied, please login again!' });
     }
     const tokenCheck = await UserTokensModel.findOne({userId:user.userId,tokens: token});
     if (!tokenCheck) {
         return res
           .status(401)
-          .json({ errorMsg: 'Access is denied, Please login again!' });
+          .json({ errorMsg: 'Access is denied, please login again!' });
       }
     req.userId = user.userId
     next();
