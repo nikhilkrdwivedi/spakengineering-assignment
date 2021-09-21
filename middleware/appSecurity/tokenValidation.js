@@ -1,6 +1,8 @@
 import jwt from 'jsonwebtoken';
+
 import constant from '../../constants/index.js';
 import UserTokensModel from '../../model/userTokens.js';
+
 const extractTokenFromHeader = (req) => {
     if (req.headers.authorization && req.headers.authorization.split(' ')[0] === 'Bearer') {
       return req.headers.authorization.split(' ')[1];
