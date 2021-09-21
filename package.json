@@ -1,0 +1,30 @@
+{
+  "name": "spakengineering-assignment",
+  "version": "1.0.0",
+  "description": "this app is assignment for spak engineering ",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikhilkrdwivedi/spakengineering-assignment.git"
+  },
+  "author": "nikhilkrdwivedi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikhilkrdwivedi/spakengineering-assignment/issues"
+  },
+  "homepage": "https://github.com/nikhilkrdwivedi/spakengineering-assignment#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "joi": "^17.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.6",
+    "nodemon": "^2.0.12"
+  }
+}

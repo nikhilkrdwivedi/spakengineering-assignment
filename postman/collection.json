@@ -1,0 +1,145 @@
+{
+    "info": {
+      "_postman_id": "522ff421-8684-47a1-ad55-67406c8fdad4",
+      "name": "Spak-Assignment",
+      "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "http://localhost:3000/api/v1/user/6147f4c073cdae4b32ea5b4b",
+        "id": "d5be4f40-6425-4def-8552-90b5be9b056c",
+        "request": {
+          "auth": {
+            "type": "bearer",
+            "bearer": {
+              "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ5NGNlY2UyMzU2MjdkMmZiZTE4MTYiLCJpYXQiOjE2MzIxOTQwMTksImV4cCI6MTYzOTk3MDAxOX0.AQ9-JFpmF-S1mOlDcyNZ6ZpKfI8XE7p7HbiozpfIdtg"
+            }
+          },
+          "method": "GET",
+          "header": [],
+          "url": "http://localhost:3000/api/v1/user/61494cece235627d2fbe1816"
+        },
+        "response": []
+      },
+      {
+        "name": "http://localhost:3000/api/v1/auth/logout",
+        "id": "07701c41-3b93-4b17-a0f2-b6a689c8fc7f",
+        "request": {
+          "auth": {
+            "type": "bearer",
+            "bearer": {
+              "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ5NGNlY2UyMzU2MjdkMmZiZTE4MTYiLCJpYXQiOjE2MzIxOTM3NzIsImV4cCI6MTYzOTk2OTc3Mn0.xuzBnEBBF3G0ymqBK7mccrXJoAhytpnwio8zfqTluAM"
+            }
+          },
+          "method": "DELETE",
+          "header": [],
+          "url": "http://localhost:3000/api/v1/auth/logout"
+        },
+        "response": []
+      },
+      {
+        "name": "http://localhost:3000/api/v1/user?pageLimit=11&pageNumber=0&sortCondition[contact]=1",
+        "id": "4ce86c1d-d3c6-441e-9baf-ce1854782bc4",
+        "request": {
+          "auth": {
+            "type": "bearer",
+            "bearer": {
+              "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ5NGNlY2UyMzU2MjdkMmZiZTE4MTYiLCJpYXQiOjE2MzIxOTQwMTksImV4cCI6MTYzOTk3MDAxOX0.AQ9-JFpmF-S1mOlDcyNZ6ZpKfI8XE7p7HbiozpfIdtg"
+            }
+          },
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:3000/api/v1/user?pageLimit=11&pageNumber=0&sortCondition[name]=1&sortCondition[contact]=1&searchString=nik",
+            "protocol": "http",
+            "host": [
+              "localhost"
+            ],
+            "port": "3000",
+            "path": [
+              "api",
+              "v1",
+              "user"
+            ],
+            "query": [
+              {
+                "key": "pageLimit",
+                "value": "11"
+              },
+              {
+                "key": "pageNumber",
+                "value": "0"
+              },
+              {
+                "key": "sortCondition[name]",
+                "value": "1"
+              },
+              {
+                "key": "sortCondition[contact]",
+                "value": "1"
+              },
+              {
+                "key": "searchString",
+                "value": "nik"
+              }
+            ]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "http://localhost:3000/api/v1/auth/verify-token/",
+        "id": "83877985-3b5e-4806-88a7-69bda0896f3b",
+        "request": {
+          "auth": {
+            "type": "bearer",
+            "bearer": {
+              "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTQ5NGNlY2UyMzU2MjdkMmZiZTE4MTYiLCJpYXQiOjE2MzIxOTM3NzIsImV4cCI6MTYzOTk2OTc3Mn0.xuzBnEBBF3G0ymqBK7mccrXJoAhytpnwio8zfqTluAM"
+            }
+          },
+          "method": "GET",
+          "header": [],
+          "url": "http://localhost:3000/api/v1/auth/verify-token/"
+        },
+        "response": []
+      },
+      {
+        "name": "http://localhost:3000/api/v1/auth/login",
+        "id": "9ed4efa6-79c2-47e8-aa20-70629dc8ce87",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"name\": \"Nikhil Kumar\",\n    \"password\": \"Nikhil123@\",\n    \"contact\": {\n        \"phone\":\"9628032001\",\n        \"countryCode\": \"+91\"\n    }\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          },
+          "url": "http://localhost:3000/api/v1/auth/login"
+        },
+        "response": []
+      },
+      {
+        "name": "http://localhost:3000/api/v1/auth/register",
+        "id": "85d5e1a8-58e6-44c0-a3e2-7cf74c156d3d",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"name\": \"Nikhil Kumar\",\n    \"password\": \"Nikhil123@\",\n    \"contact\": {\n        \"phone\":\"9628032001\",\n        \"countryCode\": \"+91\"\n    }\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          },
+          "url": "http://localhost:3000/api/v1/auth/register"
+        },
+        "response": []
+      }
+    ]
+  }
